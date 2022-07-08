@@ -1,3 +1,5 @@
+// package requirement
+// nodejs
 let path = require('path')
 let util = require('./util')
 let base64 = util.base64
@@ -12,7 +14,6 @@ let checker = item => {
     return item => item.includes('ssr://') || item.includes('ss"//')
 }
 
-// Map all the item include `ssr://` and serialize those items
 let result = str.split('\n\n')
                 .filter(item => checker(item))
                 .join('\r\n')

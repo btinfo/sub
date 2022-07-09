@@ -18,4 +18,4 @@ let result = str.split('\n\n')
                 .filter(item => checker(item))
                 .join('\r\n')
 
-writeSync(path.resolve(__dirname, BUILD_DIR, 'n'), base64(result))
+writeSync(path.resolve(__dirname, BUILD_DIR, 'node'), base64(result))
